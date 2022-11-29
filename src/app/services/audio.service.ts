@@ -120,5 +120,16 @@ export class AudioService {
     }
     this.stateChange.next(this.state);
   }
+  private resetState() {
+    this.state = {
+      playing: false,
+      readableCurrentTime: '',
+      readableDuration: '',
+      duration: undefined,
+      currentTime: undefined,
+      canplay: false,
+      error: false
+    };
+  }
 }
 
