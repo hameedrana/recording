@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
     this.audioService.playStream(url).subscribe(events => {
       // listening for fun here
       console.log(url)
+      console.log(events)
     });
   }
 
