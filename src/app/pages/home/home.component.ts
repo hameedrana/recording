@@ -11,7 +11,9 @@ import { CloudService } from 'src/app/services/cloud.service';
 
 export class HomeComponent implements OnInit {
   files: Array<any> = [];
-  state!: StreamState;
+  
+   state!
+   :StreamState ;
   currentFile: any = {};
 
 
@@ -19,11 +21,14 @@ export class HomeComponent implements OnInit {
     // get media files
     cloudService.getFiles().subscribe(files => {
       this.files = files;
+      console.log(this.files)
     });
 
     // listen to stream state
     this.audioService.getState().subscribe(state => {
       this.state = state;
+    
+      console.log(this.state)
     });
   }
 
@@ -34,6 +39,7 @@ export class HomeComponent implements OnInit {
   playStream(url:any) {
     this.audioService.playStream(url).subscribe(events => {
       // listening for fun here
+      console.log(url)
     });
   }
 

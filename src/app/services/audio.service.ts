@@ -49,8 +49,8 @@ export class AudioService {
   }
 
   private addEvents(obj:any, events:any, handler:any) {
-    events.forEach((event:any) => {
-      obj.addEventListener((event:any)=> handler);
+    events.forEach((event:any)=> {
+      obj.addEventListener(event, handler);
     });
   }
 
