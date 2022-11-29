@@ -14,7 +14,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HelpComponent } from './pages/help/help.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-
+import {MatListModule} from '@angular/material/list';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [AppComponent, HomeComponent, ProfileComponent, AboutComponent, HelpComponent, NotFoundComponent],
   imports: [
@@ -26,6 +28,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    MatListModule,
+    MatSliderModule,
+    MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
