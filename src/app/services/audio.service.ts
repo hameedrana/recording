@@ -131,5 +131,8 @@ export class AudioService {
       error: false
     };
   }
+  getState(): Observable<StreamState> {
+    return this.stateChange.asObservable();
+  }
 }
 
